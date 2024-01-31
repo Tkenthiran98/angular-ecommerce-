@@ -1,0 +1,79 @@
+/* Navbar styling */
+app-navbar {
+  background-color: #1174d7; /* Dark blue background color */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Adjust the font size */
+  color: #fff; /* Text color for the brand */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color of the navbar toggler icon */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Adjust spacing between navigation items */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* Text color for navigation links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2980b9 !important; /* Text color on hover */
+}
+
+/* Dashboard styling */
+.dashboard-container {
+  padding-top: 56px; /* Adjusted based on the height of your fixed navbar */
+}
+
+.dashboard-content {
+  padding: 20px;
+}
+
+.dashboard-header {
+  margin-top: 2rem;
+}
+
+.dashboard-header h3 {
+  color: #3498db; /* Heading text color */
+}
+
+.dashboard-header p {
+  color: #555; /* Paragraph text color */
+  margin-top: 10px;
+}
+
+/* Table styling */
+.table-responsive {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-top: 1rem; /* Add margin for better spacing */
+  text-align: center; /* Center align text in cells */
+}
+
+.table th, .table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.table tbody tr:hover {
+  background-color: #e0e0e0;
+}

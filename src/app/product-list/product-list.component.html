@@ -1,0 +1,12 @@
+<div class="product-list">
+    <!-- Add your product list HTML here -->
+    <div *ngFor="let product of products" class="product-item">
+      <img [src]="product.image" alt="{{ product.title }}" class="product-image">
+      <div class="product-details">
+        <div class="product-title">{{ product.title }}</div>
+        <div class="product-price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</div>
+        <button class="buy-btn" routerLink="/checkout" (click)="buyNow()">Buy Now</button>
+    </div>
+    </div>
+  </div>
+  

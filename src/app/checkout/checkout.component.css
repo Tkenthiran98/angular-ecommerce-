@@ -1,0 +1,112 @@
+/* Add your global styles here */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Style for the checkout container */
+.checkout-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for form headings */
+h2, h3 {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Style for form labels and inputs */
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #2d3748;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for buttons */
+button {
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #ff8c5b, #ff5e62);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the form steps */
+form > div {
+  display: none;
+}
+
+form > div:first-child {
+  display: block;
+}
+
+/* Style for Previous and Next buttons */
+button.btn-secondary, button.btn-primary {
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn-secondary:hover, button.btn-primary:hover {
+  background-color: #ffffff;
+  color: #333;
+  transform: scale(1.1);
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+  .checkout-container {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  input, button {
+    font-size: 18px;
+  }
+}

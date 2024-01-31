@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<main class="dashboard-container">
+  <div class="dashboard-content">
+    <div class="dashboard-header text-center">
+      <h3>Welcome To Dashboard</h3>
+      <p class="font-weight-bold" [innerText]="'Hi ' + user.displayName"></p>
+    </div>
+
+<br><br>
+<section id="product">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="productHeading text-center">
+                  <h2 class="mb-3">Exclusive Products</h2> 
+                  <ul class="list-unstyled d-flex   justify-content-center ">
+                      <li><a href="#" class=" m-4  text-decoration-none text-danger fw-semibold  " routerLink="/product-list">New Arrival</a></li>
+                      <li><a href="#" class=" m-4  text-decoration-none fw-semibold text-black" routerLink="/best-sellers">Best Sellers</a></li>
+                      <li><a href="#" class=" m-4  text-decoration-none fw-semibold text-black" routerLink="/featured">Featured</a></li>
+                      <li><a href="#" class=" m-4  text-decoration-none fw-semibold text-black " routerLink="/special-offer">Special Offer</a></li>
+                  </ul>  
+              </div>
+          </div>
+          <section class="section-padding gray-bg">
+            <div class="container">
+              <div class="section-header text-center">
+              </div>
+              <div class="row"> 
+                
+                <main class="dashboard-container">
+                  <div class="dashboard-content">
+                    <!-- Other dashboard content goes here -->
+                   <h2>Find the Best <span>Lap For You</span></h2>
+                    <!-- Product list section -->
+                    <app-product-list></app-product-list>
+                  </div>
+                </main>
+                

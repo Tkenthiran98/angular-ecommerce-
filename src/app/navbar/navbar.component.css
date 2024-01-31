@@ -1,0 +1,167 @@
+/* Reset some default margin on body */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ecf0f1; /* Background color */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #3498db; /* Light blue background color */
+  position: fixed;
+  width: 100%; /* Set the width to 100% */
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  padding: 15px;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold */
+  color: #fff; /* Text color for the brand */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Color of the navbar toggler icon */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; /* Adjust spacing between navigation items */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* Text color for navigation links */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #000 !important; /* Text color on hover */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 767px) {
+  .navbar {
+    width: 100%; /* Set the width to 100% on small screens */
+  }
+  .navbar-nav .nav-item {
+    margin-right: 0; /* Remove spacing between navigation items on small screens */
+  }
+}
+
+/* Custom CSS for Navbar */
+nav.navbar {
+  height: 100px; /* Set the desired height for the navbar */
+}
+
+/* Additional styling for the profile icon in the navbar */
+.navbar-nav .nav-item .profile-icon {
+  margin-right: 15px; /* Adjust the margin as needed */
+}
+
+.navbar-nav .nav-item .profile-icon img {
+  border: 3px solid #2c3e50; /* Match the navbar background color */
+}
+
+
+/* Logout Styling */
+.logout {
+  position: fixed;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  display: inline-block;
+  padding: 12px 24px;
+  width: 160px; /* Set your desired width */
+  height: 58px; /* Set your desired height */
+  background-color: #e74c3c; /* Red color for the logout link */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly increased shadow for depth */
+}
+
+.logout:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.08); /* Slightly increased scale on hover for a more pronounced effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover for depth */
+}
+ 
+/* Dropdown Content Styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 30;
+  background-color: #fff; /* Background color for the dropdown */
+  border: 1px solid #ddd; /* Border color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  overflow: hidden; /* Hide overflow content */
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform-origin: top;
+  transform: scaleY(0);
+  z-index: 1;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* List styling */
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List item styling */
+.dropdown-menu li {
+  padding: 12px 24px;
+  border-bottom: 1px solid #eee; /* Border between items */
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+/* Hover effect on list items */
+.dropdown-menu li:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+}
+
+/* Link styling */
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333; /* Link color */
+  display: block;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Adjust the font size if needed */
+.dropdown-menu a {
+  font-size: 14px;
+}
+/* Additional styling for the small class */
+.small {
+  font-size: 12px; /* Adjust the font size for the small class */
+  color: #ffffff; /* Adjust the text color for the small class to white */
+  background-color: #007BFF; /* Set your desired blue background color */
+  margin-top: 14px;
+  padding: 8px 16px; /* Add padding for a more comfortable button */
+  border-radius: 4px; /* Add a slight border radius for a softer look */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transitions */
+  width: 180px; /* Set your desired width */
+  height: 28px; /* Set your desired height */
+
+}
+
+.small:hover {
+  background-color: #0056b3; /* Darker blue on hover for an interactive effect */
+  color: #fff; /* White text on hover for contrast */
+}

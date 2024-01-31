@@ -1,0 +1,91 @@
+<!-- checkout.component.html -->
+<div class="checkout-container">
+  <h2 class="text-center mb-4">Checkout</h2>
+  <form #checkoutForm="ngForm">
+    <!-- Step 1: Personal Information -->
+    <div *ngIf="currentStep === 1">
+      <h3>Personal Information</h3>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="email">
+      </div>
+
+      <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+    </div>
+
+    <!-- Step 2: Delivery Information -->
+    <div *ngIf="currentStep === 2">
+      <h3>Delivery Information</h3>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" class="form-control" required [(ngModel)]="address">
+      </div>
+
+      <button type="button" class="btn btn-secondary" (click)="prevStep()">Previous</button>
+      <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+    </div>
+
+    <!-- Step 3: Card Information -->
+    <div *ngIf="currentStep === 3" class="checkout-step">
+      <h3>Payment Information</h3>
+
+      <!-- Credit Card Payment -->
+      <div *ngIf="selectedPaymentMethod === 'creditCard'">
+        <div class="form-group">
+          <label for="creditCardNumber">Credit Card Number:</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fas fa-credit-card"></i></span>
+            <input type="text" id="creditCardNumber" name="creditCardNumber" class="form-control" required [(ngModel)]="creditCardNumber">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="expirationDate">Expiration Date:</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="far fa-calendar-alt"></i></span>
+            <input type="text" id="expirationDate" name="expirationDate" class="form-control" placeholder="MM/YYYY" required [(ngModel)]="expirationDate">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cvv">CVV Number:</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fas fa-lock"></i></span>
+            <input type="text" id="cvv" name="cvv" class="form-control" required [(ngModel)]="cvv">
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Account Payment -->
+      <div *ngIf="selectedPaymentMethod === 'bankAccount'">
+        <div class="form-group">
+          <label for="bankAccountNumber">Bank Account Number:</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fas fa-university"></i></span>
+            <input type="text" id="bankAccountNumber" name="bankAccountNumber" class="form-control" required [(ngModel)]="bankAccountNumber">
+          </div>
+        </div>
+        <!-- Add more fields for bank account information as needed -->
+      </div>
+
+      <!-- Payment Method Selection -->
+      <div class="form-group">
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" class="form-control" [(ngModel)]="selectedPaymentMethod" required>
+          <option value="creditCard">Credit Card</option>
+          <option value="bankAccount">Bank Account</option>
+          <!-- Add more payment options as needed -->
+        </select>
+      </div>
+
+      <button type="button" class="btn btn-secondary" (click)="prevStep()">Previous</button>
+      <button type="button" class="btn btn-primary" (click)="placeOrder()" [disabled]="!checkoutForm.valid">Place Order</button>
+    </div>
+
+  </form>
+</div>

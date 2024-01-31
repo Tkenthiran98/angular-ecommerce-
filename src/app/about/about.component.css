@@ -1,0 +1,51 @@
+/* about.component.css */
+
+#about-us {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2 {
+    color: #343a40; /* Dark text color */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.1em;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#about-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about-us li {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+#about-us li strong {
+    color: #007bff; /* Blue color for strong text */
+}
+
+#about-us footer {
+    margin-top: 40px;
+    color: #777777;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    #about-us {
+        padding: 30px 15px;
+    }
+    #about-us h2 {
+        font-size: 2em;
+    }
+}
